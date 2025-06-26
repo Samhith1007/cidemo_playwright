@@ -7,13 +7,13 @@ test('record demo test', async ({ page }) => {
   //   await route.continue();
   // });
 
-  await page.route('**/*', async (route, request) => {
-    if (request.resourceType() === 'script') {
-      await route.abort();
-    } else {
-      await route.continue();
-    }
-  });
+  // await page.route('**/*', async (route, request) => {
+  //   if (request.resourceType() === 'script') {
+  //     await route.abort();
+  //   } else {
+  //     await route.continue();
+  //   }
+  // });
 
   //await page.route('**/*.png', route => route.abort());
 
