@@ -30,7 +30,6 @@ test('Login Test1', async ({ }) => {
     await page2.getByRole('textbox', { name: 'Enter your password' }).click();
     await page2.getByRole('textbox', { name: 'Enter your password' }).fill('saki');
     await page2.getByRole('link', { name: 'Sign in' }).click();
-    await page2.pause()
 
     await context1.close();
     await context2.close();

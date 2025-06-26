@@ -3,7 +3,6 @@ import { test, expect } from '@playwright/test';
 test('Assertion Demo', async ({ page }) => {
 
     await page.goto('https://kitchen.applitools.com/')
-    await page.pause()
 
     // ASSERTIONS 
     // check element present or not
@@ -34,10 +33,8 @@ test('Assertion Demo', async ({ page }) => {
     await expect.soft(page.getByRole('heading', { name: 'The Kitchen' })).toHaveAttribute('class', /.*css-dpmy2a/)
     await expect.soft(page.getByRole('heading', { name: 'The Kitchen' })).toHaveClass(/.*css-dpmy2a/)
 
-    await page.pause()
-
     await expect(page).toHaveURL(/.*kitchen.applitools.com/);
-    await page.pause()
+
 
     // visual validation 
 
