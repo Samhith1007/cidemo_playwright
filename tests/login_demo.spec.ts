@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.only('Demo Login Test1', async ({ page }) => {
+test('Demo Login Test1', async ({ page }) => {
     await page.goto('https://demo.applitools.com/')
     await page.pause()
     await page.locator('#username').click();
